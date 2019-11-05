@@ -1,0 +1,14 @@
+https://dtcacademy.id/intro-programming-class/pertemuan-2/#4.basichtml
+
+https://codepen.io/pen
+https://www.w3schools.com/
+https://www.sketch.com/
+https://www.figma.com/
+codesandbox.io
+
+class boleh >1
+id hanya 1
+
+ex="apples"
+
+ex1[:3]

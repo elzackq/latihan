@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 1px;
+   
+}
+.nav{
+    margin: auto;
+    text-align: center;
+    font-family: fantasy;
+    width: 100%;
+    font-size: 20px;
+ 
+}
+
+.nav ul{
+    background: #7f8c8d;
+    list-style: none;
+    position: relative;
+    display: inline-table;
+    width: 100%;
+    padding: 0 20px;
+    border-radius: 20px;
+}
+
+.nav ul li{
+    float: left;
+}
+
+.nav ul li:hover{
+    background: #16a085;
+    
+}
+.nav ul li:hover{
+    background: #16a085;
+}
+
+.nav ul li:hover a{
+    color: snow;
+}
+
+.nav ul li a{
+    display: block;
+    padding: 20px;
+    color: #bdc3c7;
+    text-decoration: none;
+}
+.wrapper {
+     max-width: 800px;
+     margin: 0 auto;
+}
+
+.article {
+    border: 1px solid white;
+    display: flex;
+    border-radius:20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding: 10px;
+    background : silver;
+    }
+.article .image {
+    height: 100px;
+    width: 100px;
+    flex: none;
+    background: burlywood;
+    margin-right: 10px;
+    border-radius:20px;
+    }
+.article .article-text h2 {
+    margin: 0;
+    }
+.article .article-text button {
+    background: cadetblue;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s background ease;
+    }
+.article .article-text button:hover {background: orangered;}

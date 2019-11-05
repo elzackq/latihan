@@ -1,0 +1,32 @@
+.body {
+    background: silver;
+}
+.article {
+    border: 1px solid black;
+    display: flex;
+    margin-bottom: 20px;
+    padding: 10px;
+    }
+
+.article .image {
+    height: 100px;
+    width: 100px;
+    flex: none;
+    background: burlywood;
+    margin-right: 10px;
+    }
+
+.article .article-text h2 {
+    margin: 0;
+    }
+
+.article .article-text button {
+    background: cadetblue;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s background ease;
+    }
+
+.article .article-text button:hover {background: orangered;}

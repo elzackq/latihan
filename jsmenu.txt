@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div>
+      <div id="carausel">
+        <div class="slide slide-1">
+          Slide 1
+        </div>
+        <div class="slide slide-2">
+          Slide 2
+        </div>
+        <div class="slide slide-3">
+          Slide 3
+        </div>
+      </div>
+      <button id="prev">Sebelumnya</button>
+      <button id="next">Selanjutnya</button>
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
+
+body {
+  font-family: sans-serif;
+}
+
+#carausel {
+  display: flex;
+  overflow: hidden;
+}
+
+#carausel .slide {
+  height: 300px;
+  width: 100%;
+  flex: none;
+  border: 1px solid grey;
+  transition: 3s all ease;
+}
+
+.slide-1 {
+  background: yellow;
+}
+.slide-2 {
+  background: green;
+}
+.slide-3 {
+  background: blueviolet;
+}
+
+#prev {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+}
+
+#next {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+}
+
+import "./styles.css";
+
+const carausel = document.getElementById("carausel");
+const next = document.getElementById("next");
+const prev = document.getElementById("prev");
+
+const carauselitem = carausel.children;
+
+var width = 0;
+var slide = false;
+
+next.addEventListener("click", function() {
+  slide = true;
+  for (let i = 0; i < carauselitem.length; i++) {
+    const item = carauselitem[1];
+    if (slide) {
+      width -= item.clientWidth;
+      slide = false;
+      item.style.transform = `translateX(${width}px)`;
+      console.log(width);
+    }
+  }
+});
+
+prev.addEventListener("click", function() {
+  slide = true;
+  for (let i = 0; i < carauselitem.length; i++) {
+    const item = carauselitem[1];
+    if (slide) {
+      width += item.clientWidth;
+      slide = false;
+      item.style.transform = `translateX(${width}px)`;
+      console.log(width);
+    }
+  }
+});
+// console.log(carauselitem);
+// console.log(next);
+// console.log(prev);
